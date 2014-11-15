@@ -1,0 +1,3 @@
+#!/bin/sh
+ffmpeg -y -i $1 -r 20 -s 352x288 -b 400k -acodec aac -strict experimental -ac 1 -ar 8000 -ab 24k $2
+
