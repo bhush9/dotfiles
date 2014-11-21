@@ -18,12 +18,20 @@ set laststatus=2
 "vim-airline always shows it
 set noshowmode
 
+"tunr wildmenu on
+set wildmenu
+
+"confirm before closing
+set confirm
+
 "force 256 terminal colors
 set t_Co=256
 
+set background=dark
+colorscheme solarized
 "setup gentooish colorscheme
-colorscheme gentooish
-let g:airline_theme='serene'
+"colorscheme jellybeans
+let g:airline_theme='powerlineish'
 
 "set some unicode symbols for airline
 if !exists('g:airline_symbols')
@@ -39,6 +47,9 @@ let g:airline_symbols.whitespace = 'Ξ'
 "Enable syntastic plugin
 let g:airline#extensions#syntastic#enabled = 1
 
+"Let syntastic run in passive mode
+let g:syntastic_mode_map = { "mode": "passive" }
+
 "Enable airline tabline
 let g:airline#extensions#tabline#enabled = 1
 
@@ -47,7 +58,7 @@ set showtabline=2
 
 "higlight current cursor line
 set cursorline
-highlight CursorLine cterm=NONE
+"highlight CursorLine cterm=NONE
 
 "set nerdtree window size big
 let g:NERDTreeWinSize=40
@@ -64,3 +75,6 @@ if !isdirectory(getcwd()+"//build")
 elseif
     set makeprg =make\ -j4
 endif
+
+"Okay! thats sin but..!
+set mouse=a
