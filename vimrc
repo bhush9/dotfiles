@@ -6,8 +6,13 @@ set tabstop=4
 set softtabstop=4
 set expandtab
 
+set encoding=utf8
+
 "Turn on autoindent
 set autoindent
+
+"turn on modeline
+set modeline
 
 "Show line numbers
 set number
@@ -24,29 +29,27 @@ set wildmenu
 "confirm before closing
 set confirm
 
-"force 256 terminal colors
 set t_Co=256
 
 set background=dark
-colorscheme solarized
 "setup gentooish colorscheme
-"colorscheme jellybeans
-
-"Let syntastic run in passive mode
-let g:syntastic_mode_map = { "mode": "passive" }
+colorscheme gentooish
 
 "Always show tabline
 set showtabline=2
 
 "higlight current cursor line
 set cursorline
-"highlight CursorLine cterm=NONE
+highlight CursorLine cterm=NONE
 
 "set nerdtree window size big
 let g:NERDTreeWinSize=40
 
 "Fancy nerdtree arrows looks really odd
 let g:NERDTreeDirArrows=0
+
+"Let syntastic run in passive mode
+let g:syntastic_mode_map = { "mode": "passive" }
 
 "use syntax fold method
 set foldmethod=syntax
