@@ -29,6 +29,9 @@ set wildmenu
 "confirm before closing
 set confirm
 
+"Highlight searched stuff
+set hlsearch
+
 set t_Co=256
 
 set background=dark
