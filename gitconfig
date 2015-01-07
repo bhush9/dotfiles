@@ -12,6 +12,10 @@
 	patch = diff --no-color
 	unstage = reset HEAD
 	staged = diff --staged
+	all = add -A
+	amend = commit --amend -C HEAD
+	credit = commit --amend -C HEAD --author
+	undo = reset --soft HEAD^
 [core]
 	excludesfile = /home/bshah/.gitignorerc
 [commit]
