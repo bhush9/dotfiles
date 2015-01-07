@@ -20,3 +20,9 @@
 	excludesfile = /home/bshah/.gitignorerc
 [commit]
 	template = /home/bshah/commit-template
+[grep]
+	lineNumber = true
+[log]
+	abbrevCommit = true
+[format]
+	pretty = oneline
