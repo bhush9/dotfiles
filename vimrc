@@ -31,27 +31,9 @@ set background=dark
 colorscheme solarized
 "setup gentooish colorscheme
 "colorscheme jellybeans
-let g:airline_theme='powerlineish'
-
-"set some unicode symbols for airline
-if !exists('g:airline_symbols')
-    let g:airline_symbols = {}
-endif
-
-"set up branch and other fonts
-let g:airline_powerline_fonts=0
-let g:airline_symbols.branch = '⎇'
-let g:airline_symbols.linenr = '¶'
-let g:airline_symbols.whitespace = 'Ξ'
-
-"Enable syntastic plugin
-let g:airline#extensions#syntastic#enabled = 1
 
 "Let syntastic run in passive mode
 let g:syntastic_mode_map = { "mode": "passive" }
-
-"Enable airline tabline
-let g:airline#extensions#tabline#enabled = 1
 
 "Always show tabline
 set showtabline=2
@@ -62,6 +44,9 @@ set cursorline
 
 "set nerdtree window size big
 let g:NERDTreeWinSize=40
+
+"Fancy nerdtree arrows looks really odd
+let g:NERDTreeDirArrows=0
 
 "use syntax fold method
 set foldmethod=syntax

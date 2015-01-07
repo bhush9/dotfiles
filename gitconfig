@@ -1,0 +1,18 @@
+ [url "git://anongit.kde.org/"]
+     insteadOf = kde:
+ [url "git@git.kde.org:"]
+     pushInsteadOf = kde:
+[user]
+	email = bhush94@gmail.com
+	name = Bhushan Shah
+[color]
+	ui = always
+[alias]
+	plog = log --pretty=format:'%Cred%h%Creset %an: %s - %Creset %C(yellow)%d%Creset %Cgreen(%cr)%Creset' --abbrev-commit --date=relative
+	patch = diff --no-color
+	unstage = reset HEAD
+	staged = diff --staged
+[core]
+	excludesfile = /home/bshah/.gitignorerc
+[commit]
+	template = /home/bshah/commit-template
