@@ -54,6 +54,9 @@ let g:NERDTreeDirArrows=0
 "Let syntastic run in passive mode
 let g:syntastic_mode_map = { "mode": "passive" }
 
+"Enable some CtrlP extensions
+let g:ctrlp_extensions = ['tag', 'quickfix']
+
 "use syntax fold method
 set foldmethod=syntax
 
