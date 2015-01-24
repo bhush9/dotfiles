@@ -97,4 +97,11 @@ function PreviewWindow()
     setlocal nonumber
 endfunction
 "}}}
+
+" UltiSnip Settings {{{
+let g:UltiSnipsExpandTrigger="<tab>"
+let g:UltiSnipsJumpForwardTrigger="<tab>"
+let g:UltiSnipsJumpBackwardTrigger="<s-tab>"
+"}}}
+
 " vim:foldmethod=marker:foldlevel=0
