@@ -29,7 +29,8 @@ let g:mapleader="," " , is leader
 
 " colors {{{
 set t_Co=256 "256 colors
-colorscheme gentooish "gentooish colorscheme
+"colorscheme gentooish "gentooish colorscheme
+colorscheme jellybeans
 highlight CursorLine term=none cterm=none
 highlight SignColumn term=underline ctermfg=250 ctermbg=235 guifg=DarkBlue guibg=Grey
 syntax enable "syntax highlighting
@@ -62,6 +63,7 @@ nnoremap <silent> <leader><space> :nohlsearch<CR>
 " Folding {{{
 set foldenable
 set foldmethod=indent
+set foldlevel=99
 nnoremap <space> za
 " }}}
 
@@ -89,7 +91,11 @@ nnoremap <leader>' viw<esc>a'<esc>hbi'<esc>lel
 "}}}
 
 " Powerline {{{
-let g:Powerline_symbols = 'fancy'
+"let g:Powerline_symbols = 'fancy'
+let g:airline_powerline_fonts = 1
+let g:airline_theme='powerlineish'
+let g:airline#extensions#hunks#enabled = 0
+let g:airline#extensions#tagbar#flags = 'p'
 " }}}
 
 " Syntastic {{{
