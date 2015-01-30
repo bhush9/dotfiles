@@ -1,3 +1,8 @@
+" File: bshah/.vimrc
+" Author: Bhushan Shah
+" Description: My personal vimrc
+" Last Modified: January 25, 2015
+
 " This vimrc is only for education purpose, if used as it is may explode your
 " screen and kill kittens.
 
@@ -11,7 +16,11 @@
 " <space> - toggles current fold
 " <leader>n - Next buffer
 " <leader>p - Previous buffer
-" <leader>space - clears search highlighting
+" <leader>vi - Opens .vimrc to quickly edit it
+" <leader>sv - Sources .vimrc
+" <leader>" - Double quote current word
+" <leader>' - Single quote current word
+" <leader><space> - clears search highlighting
 
 " first things first
 set nocompatible
@@ -42,7 +51,7 @@ set showmatch
 set laststatus=2
 set noshowmode
 set modelines=1
- " }}}
+" }}}
 
 " Searching {{{
 set incsearch
@@ -73,6 +82,10 @@ nnoremap <silent> <F11> :set number!<CR>
 nnoremap <silent> <F8> :TagbarToggle<cr>
 nnoremap <silent> <leader>n :bnext<CR>
 nnoremap <silent> <leader>p :bprevious<CR>
+nnoremap <silent> <leader>vi :split $MYVIMRC<CR>
+nnoremap <silent> <leader>sv :source $MYVIMRC<CR>
+nnoremap <leader>" viw<esc>a"<esc>hbi"<esc>lel
+nnoremap <leader>' viw<esc>a'<esc>hbi'<esc>lel
 "}}}
 
 " Powerline {{{
@@ -92,16 +105,27 @@ let g:tagbar_autoclose = 1
  "}}}
 
 " Auto commands {{{
-autocmd BufWinEnter * if &previewwindow | setlocal nonumber | endif
-function PreviewWindow()
-    setlocal nonumber
-endfunction
+if !exists("autocommands_loaded")
+    let autocommands_loaded = 1
+    autocmd BufWinEnter * if &previewwindow | setlocal nonumber | endif
+    function PreviewWindow()
+        setlocal nonumber
+    endfunction
+endif
 "}}}
 
 " UltiSnip Settings {{{
-let g:UltiSnipsExpandTrigger="<tab>"
-let g:UltiSnipsJumpForwardTrigger="<tab>"
-let g:UltiSnipsJumpBackwardTrigger="<s-tab>"
+"let g:UltiSnipsExpandTrigger="<tab>"
+"let g:UltiSnipsJumpForwardTrigger="<tab>"
+"let g:UltiSnipsJumpBackwardTrigger="<s-tab>"
 "}}}
+
+" Remove when you get used to it
+" Strict Mappings {{{
+"nnoremap <Up> <nop>
+"nnoremap <Down> <nop>
+"nnoremap <Left> <nop>
+"nnoremap <Right> <nop>
+" }}}
 
 " vim:foldmethod=marker:foldlevel=0
