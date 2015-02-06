@@ -10,12 +10,14 @@
 
 " <F3>  - toggle NERDTree
 " <F4>  - Paste mode toggle
+" <F5>  - calls ClangUpdateQuickFix()
 " <F8>  - Toggles tagbar
 " <F11> - toggles numbering
 
 " <space> - toggles current fold
 " <leader>n - Next buffer
 " <leader>p - Previous buffer
+" <leader>q - Opens quickfix window
 " <leader>vi - Opens .vimrc to quickly edit it
 " <leader>sv - Sources .vimrc
 " <leader>" - Double quote current word
@@ -31,8 +33,8 @@ let g:mapleader="," " , is leader
 set t_Co=256 "256 colors
 "colorscheme gentooish "gentooish colorscheme
 colorscheme jellybeans
-highlight CursorLine term=none cterm=none
-highlight SignColumn term=underline ctermfg=250 ctermbg=235 guifg=DarkBlue guibg=Grey
+"highlight CursorLine term=none cterm=none
+"highlight SignColumn term=underline ctermfg=250 ctermbg=235 guifg=DarkBlue guibg=Grey
 syntax enable "syntax highlighting
 " }}}
 
@@ -41,6 +43,8 @@ set tabstop=4
 set softtabstop=4
 set expandtab
 set shiftwidth=4
+set smarttab
+set cindent
 " }}}
 
 " UI config {{{
@@ -88,6 +92,7 @@ nnoremap <silent> <leader>vi :split $MYVIMRC<CR>
 nnoremap <silent> <leader>sv :source $MYVIMRC<CR>
 nnoremap <leader>" viw<esc>a"<esc>hbi"<esc>lel
 nnoremap <leader>' viw<esc>a'<esc>hbi'<esc>lel
+nnoremap <silent> <leader>q :copen<CR>
 "}}}
 
 " Powerline {{{
@@ -103,7 +108,6 @@ let g:syntastic_mode_map = { "mode": "passive" }
 "}}}
 
 " Tagbar {{{
-set tags=./tags,tags
 let g:tagbar_width = 50
 let g:tagbar_autoclose = 1
 " Useful but little annoying
@@ -125,6 +129,15 @@ endif
 "let g:UltiSnipsJumpForwardTrigger="<tab>"
 "let g:UltiSnipsJumpBackwardTrigger="<s-tab>"
 "}}}
+
+" clang settings {{{
+let g:clang_auto_user_options = "path, .clang_complete, compile_commands.json"
+let g:clang_complete_copen = 1
+let g:clang_snippets = 1
+let g:clang_snippets_engine = 'ultisnips'
+let g:clang_auto_select = 1
+nnoremap <silent> <F5> :call ClangUpdateQuickFix()<CR>
+" }}}
 
 " Remove when you get used to it
 " Strict Mappings {{{

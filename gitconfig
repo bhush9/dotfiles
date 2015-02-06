@@ -6,7 +6,7 @@
 	email = bhush94@gmail.com
 	name = Bhushan Shah
 [color]
-	ui = always
+	ui = auto
 [alias]
 	plog = log --pretty=format:'%Cred%h%Creset %an: %s - %Creset %C(yellow)%d%Creset %Cgreen(%cr)%Creset' --abbrev-commit --date=relative
 	patch = diff --no-color
