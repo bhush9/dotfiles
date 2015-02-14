@@ -44,11 +44,13 @@ set softtabstop=4
 set expandtab
 set shiftwidth=4
 set smarttab
-set cindent
+"set cindent
+set smartindent
 " }}}
 
 " UI config {{{
 set number
+set relativenumber
 set cursorline
 filetype plugin on
 set wildmenu
@@ -84,7 +86,7 @@ nnoremap <silent> <F3> :NERDTreeToggle<CR>
 
 " Key mappings {{{
 nnoremap <silent> <F4> :set paste!<CR>
-nnoremap <silent> <F11> :set number!<CR>
+nnoremap <silent> <F11> :set relativenumber!<CR>
 nnoremap <silent> <F8> :TagbarToggle<cr>
 nnoremap <silent> <leader>n :bnext<CR>
 nnoremap <silent> <leader>p :bprevious<CR>
@@ -93,6 +95,9 @@ nnoremap <silent> <leader>sv :source $MYVIMRC<CR>
 nnoremap <leader>" viw<esc>a"<esc>hbi"<esc>lel
 nnoremap <leader>' viw<esc>a'<esc>hbi'<esc>lel
 nnoremap <silent> <leader>q :copen<CR>
+
+"Esc is too far..
+inoremap jk <esc>
 "}}}
 
 " Powerline {{{
@@ -125,6 +130,7 @@ endif
 "}}}
 
 " UltiSnip Settings {{{
+let g:UltiSnipsEditSplit='horizontal'
 "let g:UltiSnipsExpandTrigger="<tab>"
 "let g:UltiSnipsJumpForwardTrigger="<tab>"
 "let g:UltiSnipsJumpBackwardTrigger="<s-tab>"
@@ -141,10 +147,10 @@ nnoremap <silent> <F5> :call ClangUpdateQuickFix()<CR>
 
 " Remove when you get used to it
 " Strict Mappings {{{
-"nnoremap <Up> <nop>
-"nnoremap <Down> <nop>
-"nnoremap <Left> <nop>
-"nnoremap <Right> <nop>
+nnoremap <Up> <nop>
+nnoremap <Down> <nop>
+nnoremap <Left> <nop>
+nnoremap <Right> <nop>
 " }}}
 
 " vim:foldmethod=marker:foldlevel=0
