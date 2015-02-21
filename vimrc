@@ -95,7 +95,8 @@ nnoremap <silent> <leader>sv :source $MYVIMRC<CR>
 nnoremap <leader>" viw<esc>a"<esc>hbi"<esc>lel
 nnoremap <leader>' viw<esc>a'<esc>hbi'<esc>lel
 nnoremap <silent> <leader>q :copen<CR>
-
+nnoremap <leader>gs :Gstatus<CR>
+nnoremap <leader>gc :Gcommmit<CR>
 "Esc is too far..
 inoremap jk <esc>
 "}}}
@@ -142,6 +143,7 @@ let g:clang_complete_copen = 1
 let g:clang_snippets = 1
 let g:clang_snippets_engine = 'ultisnips'
 let g:clang_auto_select = 1
+set completeopt=menu,menuone,longest
 nnoremap <silent> <F5> :call ClangUpdateQuickFix()<CR>
 " }}}
 
@@ -151,6 +153,10 @@ nnoremap <Up> <nop>
 nnoremap <Down> <nop>
 nnoremap <Left> <nop>
 nnoremap <Right> <nop>
+inoremap <Up> <nop>
+inoremap <Down> <nop>
+inoremap <Left> <nop>
+inoremap <Right> <nop>
 " }}}
 
 " vim:foldmethod=marker:foldlevel=0
