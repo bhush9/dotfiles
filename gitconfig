@@ -23,3 +23,5 @@
 	status = false
 [grep]
 	lineNumber = true
+[push]
+	default = upstream
