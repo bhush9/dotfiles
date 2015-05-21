@@ -31,10 +31,11 @@ let g:mapleader="," " , is leader
 
 " colors {{{
 set t_Co=256 "256 colors
-"colorscheme gentooish "gentooish colorscheme
-colorscheme jellybeans
-"highlight CursorLine term=none cterm=none
-"highlight SignColumn term=underline ctermfg=250 ctermbg=235 guifg=DarkBlue guibg=Grey
+colorscheme gentooish
+"gentooish colorscheme
+"colorscheme jellybeans
+highlight CursorLine term=none cterm=none
+highlight SignColumn term=underline ctermfg=250 ctermbg=235 guifg=DarkBlue guibg=Grey
 syntax enable "syntax highlighting
 " }}}
 
@@ -58,6 +59,7 @@ set showmatch
 set laststatus=2
 set noshowmode
 set modelines=1
+set scrolloff=5
 " }}}
 
 " Searching {{{
@@ -97,6 +99,7 @@ nnoremap <leader>' viw<esc>a'<esc>hbi'<esc>lel
 nnoremap <silent> <leader>q :copen<CR>
 nnoremap <leader>gs :Gstatus<CR>
 nnoremap <leader>gc :Gcommmit<CR>
+nnoremap <leader>a :Gwrite<CR>
 "Esc is too far..
 inoremap jk <esc>
 "}}}
@@ -106,6 +109,7 @@ inoremap jk <esc>
 let g:airline_powerline_fonts = 1
 let g:airline_theme='powerlineish'
 let g:airline#extensions#hunks#enabled = 0
+"let g:airline#extensions#promptline#snapshot_file = "~/.shell_prompt.sh"
 let g:airline#extensions#tagbar#flags = 'p'
 " }}}
 
@@ -142,6 +146,7 @@ let g:clang_auto_user_options = "path, .clang_complete, compile_commands.json"
 let g:clang_complete_copen = 1
 let g:clang_snippets = 1
 let g:clang_snippets_engine = 'ultisnips'
+"let g:clang_periodic_quickfix = 1
 let g:clang_auto_select = 1
 set completeopt=menu,menuone,longest
 nnoremap <silent> <F5> :call ClangUpdateQuickFix()<CR>
