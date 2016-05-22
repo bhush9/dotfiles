@@ -47,6 +47,7 @@ set shiftwidth=4
 set smarttab
 "set cindent
 set smartindent
+autocmd Filetype ruby setlocal ts=2 sts=2 sw=2
 " }}}
 
 " UI config {{{
@@ -136,9 +137,9 @@ endif
 
 " UltiSnip Settings {{{
 let g:UltiSnipsEditSplit='horizontal'
-"let g:UltiSnipsExpandTrigger="<tab>"
-"let g:UltiSnipsJumpForwardTrigger="<tab>"
-"let g:UltiSnipsJumpBackwardTrigger="<s-tab>"
+let g:UltiSnipsExpandTrigger="<tab>"
+let g:UltiSnipsJumpForwardTrigger="<tab>"
+let g:UltiSnipsJumpBackwardTrigger="<s-tab>"
 "}}}
 
 " clang settings {{{
