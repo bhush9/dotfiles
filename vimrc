@@ -31,9 +31,8 @@ let g:mapleader="," " , is leader
 
 " colors {{{
 set t_Co=256 "256 colors
-colorscheme gentooish
-"gentooish colorscheme
-"colorscheme jellybeans
+"colorscheme gentooish
+colorscheme jellybeans
 highlight CursorLine term=none cterm=none
 highlight SignColumn term=underline ctermfg=250 ctermbg=235 guifg=DarkBlue guibg=Grey
 syntax enable "syntax highlighting
@@ -48,6 +47,7 @@ set smarttab
 "set cindent
 set smartindent
 autocmd Filetype ruby setlocal ts=2 sts=2 sw=2
+autocmd Filetype dts setlocal noexpandtab ts=8
 " }}}
 
 " UI config {{{
@@ -74,6 +74,7 @@ set foldenable
 set foldmethod=indent
 set foldlevel=99
 nnoremap <space> za
+set conceallevel=2
 " }}}
 
 " CtrlP {{{
@@ -120,7 +121,7 @@ let g:syntastic_mode_map = { "mode": "passive" }
 
 " Tagbar {{{
 let g:tagbar_width = 50
-let g:tagbar_autoclose = 1
+" let g:tagbar_autoclose = 1
 " Useful but little annoying
 " let g:tagbar_autopreview = 1
  "}}}
@@ -151,6 +152,8 @@ let g:clang_snippets_engine = 'ultisnips'
 let g:clang_auto_select = 1
 set completeopt=menu,menuone,longest
 nnoremap <silent> <F5> :call ClangUpdateQuickFix()<CR>
+nnoremap <silent> <F6> :cnext<CR>
+nnoremap <silent> <F7> :cnext<CR>
 " }}}
 
 " Remove when you get used to it
