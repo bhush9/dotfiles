@@ -31,8 +31,8 @@ let g:mapleader="," " , is leader
 
 " colors {{{
 set t_Co=256 "256 colors
-"colorscheme gentooish
-colorscheme jellybeans
+colorscheme gentooish
+"colorscheme jellybeans
 highlight CursorLine term=none cterm=none
 highlight SignColumn term=underline ctermfg=250 ctermbg=235 guifg=DarkBlue guibg=Grey
 syntax enable "syntax highlighting
