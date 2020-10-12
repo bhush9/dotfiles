@@ -34,6 +34,7 @@ set t_Co=256 "256 colors
 colorscheme gentooish
 "colorscheme jellybeans
 highlight CursorLine term=none cterm=none
+highlight CursorLineNr term=none cterm=none
 highlight SignColumn term=underline ctermfg=250 ctermbg=235 guifg=DarkBlue guibg=Grey
 syntax enable "syntax highlighting
 " }}}
@@ -47,7 +48,10 @@ set smarttab
 "set cindent
 set smartindent
 autocmd Filetype ruby setlocal ts=2 sts=2 sw=2
+autocmd Filetype eruby setlocal ts=2 sts=2 sw=2
 autocmd Filetype dts setlocal noexpandtab ts=8
+let g:linuxsty_patterns = [ "/usr/src/", "/linux", "Kernel" ]
+"set colorcolumn=81
 " }}}
 
 " UI config {{{
@@ -168,4 +172,6 @@ inoremap <Left> <nop>
 inoremap <Right> <nop>
 " }}}
 
+let g:session_autoload = 'yes'
+let g:session_autosave = 'yes'
 " vim:foldmethod=marker:foldlevel=0
