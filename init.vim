@@ -32,6 +32,10 @@ Plugin 'mattesgroeger/vim-bookmarks'
 Plugin 'akinsho/bufferline.nvim'
 Plugin 'lukas-reineke/indent-blankline.nvim'
 
+" Status line
+Plugin 'vim-airline/vim-airline'
+Plugin 'vim-airline/vim-airline-themes'
+
 " LSP
 Plugin 'neovim/nvim-lspconfig'
 Plugin 'mfussenegger/nvim-jdtls'
